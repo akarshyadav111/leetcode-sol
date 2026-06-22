@@ -17,7 +17,7 @@ public:
                 return it.first;
             }
         }
-        char ch = 't';
+        char ch = ' ';
         return ch;
     }
 };
