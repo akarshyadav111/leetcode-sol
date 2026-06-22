@@ -1,10 +1,7 @@
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
-        if(nums.size()==1){
-            if(nums[0]==0) return 1;}
-        //     else return 0;
-        // } 
+        if(nums.size()==1 && nums[0]==0) return 1;
         set<int> s;
         bool f = false;
         for(int n : nums){
