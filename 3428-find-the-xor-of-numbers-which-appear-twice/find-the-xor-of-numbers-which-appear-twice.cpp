@@ -9,11 +9,6 @@ public:
                 count++;
             }
         }
-        // for(auto it : freq){
-        //     if(it.second == 2){
-        //         count++;
-        //     }
-        // }
         if(count == 0) return 0;
         int x = 0;
         int a;
