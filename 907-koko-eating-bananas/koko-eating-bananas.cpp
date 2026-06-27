@@ -7,7 +7,7 @@ public:
             long long sum=0;
             long long m=l+(h-l)/2;
             for(int x : p){
-                sum+=ceil((double)x/m);
+                sum+=(x+m-1)/m;
             }
             if(sum<=x){
                 h=m-1;
