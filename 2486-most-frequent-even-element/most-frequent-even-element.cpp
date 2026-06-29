@@ -16,14 +16,7 @@ public:
                 }
             }
         }
-        // for(auto it : freq){
-        //     if(it.first % 2 == 0){
-        //         maxi = max(maxi, it.second);
-        //         if(it.second == maxi){
-        //             maxe = min(maxe, it.first);
-        //         }
-        //     }
-        // }
+        
         if(!f) return -1;
         return maxe;
     }
