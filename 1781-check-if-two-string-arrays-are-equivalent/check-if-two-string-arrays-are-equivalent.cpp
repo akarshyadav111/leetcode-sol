@@ -8,7 +8,6 @@ public:
         for(size_t i=0; i<word2.size(); i++){
             t2+=word2[i];
         }
-        if(t1 == t2) return true;
-        return false;
+        return (t1==t2);
     }
 };
