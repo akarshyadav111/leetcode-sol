@@ -1,21 +1,14 @@
 class Solution {
 public:
-    bool isSorted(string s){
-        for(int i=0; i<s.length()-1; i++){
-            if(s[i] > s[i+1]) return false;
-        }
-        return true;
-    }
     int minDeletionSize(vector<string>& strs) {
-        int count{}, x{};
+        int count{};
         for(int i=0; i<strs[0].size(); i++){
-            string s = "";
-            for(int j=0; j<strs.size(); j++){
-                string temp = strs[j];
-                s += temp[x];
+            for(int j=1; j<strs.size(); j++){
+                if(strs[j-1][i] > strs[j][i]){
+                    count++;
+                    break;
+                }
             }
-            x++;
-            if(!isSorted(s)) count++;
         }
         return count;
     }
