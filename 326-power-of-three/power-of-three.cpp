@@ -1,8 +1,6 @@
 class Solution {
 public:
     bool isPowerOfThree(int n) {
-        // if(n==1)
-        // if(n < 3) return false;
         int low = 0, high = 31;
         while(low <= high){
             int mid = low + (high - low) / 2;
