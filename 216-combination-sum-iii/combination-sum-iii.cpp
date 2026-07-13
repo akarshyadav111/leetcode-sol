@@ -4,11 +4,10 @@ public:
     vector<int> temp;
     void backtrack(int k, int n, int idx, int s){
         if(s > n) return;
-        if(temp.size() == k && s == n){ ans.push_back(temp); return;}
+        if(temp.size() == k){ if(s == n ) ans.push_back(temp); return;}
         for(int i=idx; i<=9; i++){
             temp.push_back(i);
-            backtrack(k, n, i+1, s+=i);
-            s-=i;
+            backtrack(k, n, i+1, s+i);
             temp.pop_back();
         }
     }
