@@ -1,13 +1,13 @@
 class Solution {
 public:
     int brokenCalc(int s, int t) {
-        long long count{};
+        int c{};
         while(t>s){
             if(t==s) break;
             if(t%2!=0) t++;
             else t/=2;
-            count++;
+            c++;
         }
-        return (int)count + (s - t);
+        return c + (s - t);
     }
 };
