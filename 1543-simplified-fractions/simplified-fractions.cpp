@@ -5,12 +5,12 @@ public:
         vector<string> v;
         for(int i=2; i<=n; i++){
             for(int j=1; j<i; j++){ 
-                if(gcd(i, j) == 1) s.insert(to_string(j) + "/" + to_string(i));
+                if(gcd(i, j) == 1) v.push_back(to_string(j) + "/" + to_string(i));
             }
         }
-        for(string x : s){
-            v.push_back(x);
-        }
+        // for(string x : s){
+        //     v.push_back(x);
+        // }
         return v;
     }
 };
