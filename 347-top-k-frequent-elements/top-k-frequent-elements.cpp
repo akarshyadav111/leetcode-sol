@@ -16,15 +16,15 @@ public:
         for(int i=0; i<nums.size(); i++){
             freq[nums[i]]++;
         }
-        priority_queue<pair<int, int>> minHeap;
+        priority_queue<pair<int, int>> maxHeap;
         for(auto& it : freq){
-            minHeap.push({it.second, it.first});
+            maxHeap.push({it.second, it.first});
         }
         vector<int> v;
         int x=0;
         while(x<k){
-            v.push_back(minHeap.top().second);
-            minHeap.pop();
+            v.push_back(maxHeap.top().second);
+            maxHeap.pop();
             x++;
         }
         return v;
