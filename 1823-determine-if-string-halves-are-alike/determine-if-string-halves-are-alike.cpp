@@ -10,7 +10,6 @@ public:
             if(i<s.length()/2 && isVowel(tolower(s[i]))) cnt1++;
             if(i>=s.length()/2 && isVowel(tolower(s[i]))) cnt2++;
         }
-        if(cnt1 == cnt2) return true;
-        return false;
+        return cnt1 == cnt2;
     }
 };
