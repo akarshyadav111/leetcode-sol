@@ -9,6 +9,6 @@ public:
             }
         if (j == b) return i;
         }
-    return -1;
+        return -1;
     }
 };
