@@ -13,9 +13,13 @@ class Solution {
 public:
     void solve(TreeNode* root, int l, int h, int& sum){
         if(!root) return;
-        solve(root->left, l, h, sum);
-        if(root->val >= l && root->val <= h) sum += root->val;
-        solve(root->right, l, h, sum);
+        if(root->val < l) solve(root->right, l, h, sum);
+        else if(root->val > h) solve(root->left, l, h, sum);
+        else{
+            solve(root->left, l, h, sum);
+            if(root->val >= l && root->val <= h) sum += root->val;
+            solve(root->right, l, h, sum);
+        }
     }
     int rangeSumBST(TreeNode* root, int low, int high) {
         int sum{};
