@@ -14,7 +14,7 @@ public:
         if (!head || !head->next) return head;
         ListNode* curr = head;
         while (curr && curr->next) {
-            int gcdVal = std::gcd(curr->val, curr->next->val);
+            int gcdVal = gcd(curr->val, curr->next->val);
             ListNode* gcdNode = new ListNode(gcdVal, curr->next);
             curr->next = gcdNode;
             curr = gcdNode->next;
